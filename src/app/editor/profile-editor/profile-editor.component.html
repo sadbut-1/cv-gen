@@ -1,0 +1,12 @@
+<h3 class="text-info" style="margin-top:30px;"><i class="fa fa-bars"></i> PROFESSIONAL SUMMARY</h3>
+<div class="card">
+  <div class="card-body">
+    <i class="fa far fa-save pull-right action-pointer" style="font-size: 1.8em; " *ngIf="edit_input" (click)="editDetails()"></i>
+    <i class="fa fa-edit pull-right action-pointer" style="font-size: 1.8em;" *ngIf="!edit_input" (click)="editDetails()"></i>
+    <span *ngIf="!edit_input" [innerHTML]="service.resume.profile"></span>
+    <div style="width: 95%">
+      <app-ngx-editor [config]="editorConfig" [spellcheck]="true" [(ngModel)]="service.resume.profile" *ngIf="edit_input">
+      </app-ngx-editor>
+    </div> 
+  </div>
+</div>

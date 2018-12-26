@@ -1,0 +1,8 @@
+<p class="text-subtitle">{{ resume.translation[resume.lang].languages }}</p>
+<ng-container *ngFor="let lg of resume.languages">
+  <p class="text-col-right" style="margin-top: 20px;">{{ lg.language }}</p>
+  <div class="progress" style="height:7px; margin-top: -13px;">
+    <div class="progress-bar" role="progressbar" [ngStyle]="{ width: lg.level }" aria-valuenow="85" aria-valuemin="0"
+      aria-valuemax="100"></div>
+  </div>
+</ng-container>

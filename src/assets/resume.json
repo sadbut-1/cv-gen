@@ -1,0 +1,69 @@
+{
+    "first_name": "Eduardo",
+    "last_name": "Moya", 
+    "image": "assets/eu.jpg",
+    "profile": "Desenvolvedor Full Stack dedicado, buscando sempre criar soluções elegantes e eficientes.  Trabalhei em projetos de sistemas web com grande volume de dados e exigência de alta performance. Desenvolvi soluções para o mercado financeiro onde a confiança nas informações e a segurança são cruciais. Coordenei equipes em projetos internacionais.",
+    "employment_history": [
+        {
+            "job_title": "Game Producer/ Co-Founder",
+            "employer": "Oktagon Games",
+            "city": "Londrina",
+            "start_month": "Março",
+            "start_year": "2003",
+            "end_month": "Junho",
+            "end_year": "2013",
+            "description": "<ul><li>10 projects for the European and American market in PC platform</li><li>3 projects for the European market on the Nintendo DS platform</li><li>2 projects for the European market on the Nintendo Wii platform</li></ul>"
+        },
+        {
+            "job_title": "Gerente de TI",
+            "employer": "Mestre Cervejeiro",
+            "city": "Curitiba",
+            "start_month": "Outubro",
+            "start_year": "2013",
+            "end_month": "Junho",
+            "end_year": "2015",
+            "descriptions": [],
+            "observation": ""
+        }
+    ],
+    "education": [
+        {
+            "school": "Universidade Tecnolocia Federal do Paraná",
+            "city": "Cornélio Procópio",
+            "degree":"Sistemas de Informação",
+            "start_month":"Janeiro",
+            "start_year": "2001",
+            "end_month": "Dezembro",
+            "end_year": "2005"
+        },
+        {
+            "school": "Universidade Estadual de Londrina",
+            "degree":"Gestão Estratégica do Design",
+            "city": "Londrina",
+            "start_month":"Janeiro",
+            "start_year": "2010",
+            "end_month": "Julho",
+            "end_year": "2011"
+        }
+    ],
+    "details": {
+        "phone": "55 43 99803 1533",
+        "email": "eduardommoya@gmail.com"
+    },
+    "skills": [
+        {
+            "skill": "PHP Developer",
+            "level": "85%"
+        },
+        {
+            "skill": "Python Developer",
+            "level": "85%"
+        }
+    ],
+    "languages": [
+        {
+            "language": "English",
+            "level": "85%"
+        }
+    ]
+}

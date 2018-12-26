@@ -1,0 +1,9 @@
+<p class="text-subtitle"><i class="fa fa-graduation-cap"></i> {{ resume.translation[resume.lang].education }}</p>
+<ng-container *ngFor="let edu of resume.education">
+  <p class="text-body">
+    <strong>{{ edu.degree }} at {{ edu.school }}, {{ edu.city }}</strong><br>
+    <span class="text-muted">
+        {{ edu.start_month }} {{ edu.start_year }} - {{ edu.end_month }} {{ edu.end_year }}
+    </span>
+  </p>
+</ng-container>

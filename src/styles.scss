@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.css";
+
+.text-title {
+    line-height: 140%;
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-top:65px; 
+    margin-left: -45px;
+}
+
+.text-subtitle {
+    line-height: 140%;
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-top: 45px;
+}
+
+.text-body {
+    line-height: 140%;
+    font-size: 2em;
+    margin-left:43px;
+}
+
+.text-col-right {
+    font-size: 1.7em;
+}
+
+.text-list {
+    line-height: 140%;
+    font-size: 2em;
+    margin-left:43px;
+}
+
+.action-pointer {
+    cursor: pointer;
+}

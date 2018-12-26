@@ -1,0 +1,18 @@
+{
+    "pt": {
+        "profile": "Objetivo",
+        "experience": "Experiência",
+        "education": "Formação",
+        "skills": "Habilidades",
+        "languages": "Idiomas",
+        "details": "Contato"
+    },
+    "en": {
+        "profile": "Profile",
+        "experience": "Employment History",
+        "education": "Education",
+        "skills": "Skills",
+        "languages": "Languages",
+        "details": "Details"
+    }
+}

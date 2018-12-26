@@ -1,0 +1,60 @@
+<h3 class="text-info" style="margin-top:30px;"><i class="fa fas fa-briefcase"></i> EMPLOYMENT HISTORY</h3>
+<div class="card" *ngFor="let emp of service.resume.employment_history" style="margin-bottom: 8px;">
+  <div style="margin-left: 25px;">
+    <p style="margin-top: 20px;">
+      <strong>{{ emp.job_title }} at {{ emp.employer }}, {{ emp.city }}</strong><br>
+      <span class="text-muted">
+        {{ emp.start_month }} {{ emp.start_year }} - {{ emp.end_month }} {{ emp.end_year }}
+      </span>
+    </p>
+    <div [innerHTML]="emp.description"></div>
+  </div>
+</div>
+<button type="button" class="btn btn-outline-secondary btn-block" (click)="showForm()" *ngIf="!show_form">
+  <i class="fa fas fa-plus-circle"></i>&nbsp; Add new
+</button>
+<div class="card" *ngIf="show_form">
+  <div class="card-body">
+    <form>
+      <label>Job Title:</label>
+      <input type="text" name="job_title" class="form-control" [(ngModel)]="employment.job_title">
+      <div class="form-row">
+        <div class="col">
+          <label>Employer:</label>
+          <input type="text" name="employer" class="form-control" [(ngModel)]="employment.employer">
+        </div>
+        <div class="col">
+          <label>City:</label>
+          <input type="text" name="city" class="form-control" [(ngModel)]="employment.city">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <label>Start Date:</label>
+          <select name="start_month" [(ngModel)]="employment.start_month" class="form-control">
+            <option *ngFor="let month of months" value="{{ month }}">{{ month }}</option>
+          </select>
+        </div>
+        <div class="col">
+          <label>.</label>
+          <input type="number" name="start_year" class="form-control" [(ngModel)]="employment.start_year">
+        </div>
+        <div class="col">
+          <label>End Date:</label>
+          <select name="end_month" [(ngModel)]="employment.end_month" class="form-control">
+            <option *ngFor="let month of months" value="{{ month }}">{{ month }}</option>
+          </select>
+        </div>
+        <div class="col">
+          <label>.</label>
+          <input type="text" name="end_year" class="form-control" [(ngModel)]="employment.end_year">
+        </div>
+      </div>
+    </form>
+    <label>DESCRIPTION</label>
+    <app-ngx-editor [config]="editorConfig" [spellcheck]="true" [(ngModel)]="employment.description"></app-ngx-editor>
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-success" (click)="insertJob()">Save</button>
+  </div>
+</div>

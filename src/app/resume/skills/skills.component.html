@@ -1,0 +1,8 @@
+<p class="text-subtitle">{{ resume.translation[resume.lang].skills }}</p>
+<ng-container *ngFor="let sk of resume.skills">
+  <p class="text-col-right" style="margin-top: 20px;">{{ sk.skill }}</p>
+  <div class="progress" style="height:7px; margin-top: -13px;">
+    <div class="progress-bar" role="progressbar" [ngStyle]="{ width: sk.level }" aria-valuenow="85" aria-valuemin="0"
+      aria-valuemax="100"></div>
+  </div>
+</ng-container>

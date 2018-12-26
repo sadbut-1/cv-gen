@@ -1,0 +1,60 @@
+<h3 class="text-info" style="margin-top:30px;"><i class="fa fas fa-graduation-cap"></i> EDUCATION</h3>
+<div class="card" *ngFor="let edu of service.resume.education" style="margin-bottom: 8px;">
+  <div style="margin-left: 25px;">
+    <p style="margin-top: 20px;">
+      <strong>{{ edu.degree }} at {{ edu.school }}, {{ edu.city }}</strong><br>
+      <span class="text-muted">
+        {{ edu.start_month }} {{ edu.start_year }} - {{ edu.end_month }} {{ edu.end_year }}
+      </span>
+    </p>
+    <div [innerHTML]="edu.description"></div>
+  </div>
+</div>
+<button type="button" class="btn btn-outline-secondary btn-block" (click)="showForm()" *ngIf="!show_form">
+  <i class="fa fas fa-plus-circle"></i>&nbsp; Add new
+</button>
+<div class="card" *ngIf="show_form">
+  <div class="card-body">
+    <form>
+      <label>Degree:</label>
+      <input type="text" name="degree" class="form-control" [(ngModel)]="education.degree">
+      <div class="form-row">
+        <div class="col">
+          <label>School:</label>
+          <input type="text" name="school" class="form-control" [(ngModel)]="education.school">
+        </div>
+        <div class="col">
+          <label>City:</label>
+          <input type="text" name="edu_city" class="form-control" [(ngModel)]="education.city">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <label>Start Date:</label>
+          <select name="start_month" [(ngModel)]="education.start_month" class="form-control">
+            <option *ngFor="let month of months" value="{{ month }}">{{ month }}</option>
+          </select>
+        </div>
+        <div class="col">
+          <label>.</label>
+          <input type="number" name="start_year" class="form-control" [(ngModel)]="education.start_year">
+        </div>
+        <div class="col">
+          <label>End Date:</label>
+          <select name="end_month" [(ngModel)]="education.end_month" class="form-control">
+            <option *ngFor="let month of months" value="{{ month }}">{{ month }}</option>
+          </select>
+        </div>
+        <div class="col">
+          <label>.</label>
+          <input type="text" name="end_year" class="form-control" [(ngModel)]="education.end_year">
+        </div>
+      </div>
+    </form>
+    <label>DESCRIPTION</label>
+    <app-ngx-editor [config]="editorConfig" [spellcheck]="true" [(ngModel)]="education.description"></app-ngx-editor>
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-success" (click)="insertEducation()">Save</button>
+  </div>
+</div>

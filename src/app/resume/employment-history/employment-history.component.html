@@ -1,0 +1,10 @@
+<p class="text-subtitle"><i class="fa fa-briefcase"></i> {{ resume.translation[resume.lang].experience }}</p>
+<ng-container *ngFor="let emp of resume.employment_history">
+  <p class="text-body" style="margin-top: 20px;">
+    <strong>{{ emp.job_title }} at {{ emp.employer }}, {{ emp.city }}</strong><br>
+    <span class="text-muted">
+      {{ emp.month_date }} {{ emp.start_year}} - {{ emp.end_month }} {{ emp.end_year }}
+    </span>
+    <span [innerHTML]="emp.description"></span>
+  </p>
+</ng-container>

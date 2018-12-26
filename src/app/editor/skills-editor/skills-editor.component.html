@@ -1,0 +1,41 @@
+<h3 class="text-info" style="margin-top:30px;"><i class="fa fas fa-check"></i> SKILLS</h3>
+<div class="card" *ngFor="let skill of service.resume.skills" style="margin-bottom: 8px;">
+  <div style="margin-left: 25px;">
+
+    <p style="margin-top: 15px;">
+      <strong>{{ skill.skill }}</strong><br>
+      <span class="text-muted">
+        {{ skill.level }}
+      </span>
+    </p>
+  </div>
+</div>
+<button type="button" class="btn btn-outline-secondary btn-block" (click)="showForm()" *ngIf="!show_form">
+  <i class="fa fas fa-plus-circle"></i>&nbsp; Add new
+</button>
+<div class="card" *ngIf="show_form">
+  <div class="card-body">
+    <form>
+      <div class="form-row">
+        <div class="col">
+          <label>Skill:</label>
+          <input type="text" name="skill" class="form-control" [(ngModel)]="skill.skill">
+        </div>
+        <div class="col">
+          <label>Level:</label>
+          <select name="level" class="form-control" [(ngModel)]="skill.level">
+            <option value="0">Select level</option>
+            <option value="20%">Novice</option>
+            <option value="40%">Beginner</option>
+            <option value="60%">Skillful</option>
+            <option value="80%">Experienced</option>
+            <option value="100%">Expert</option>
+          </select>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-success" (click)="insertSkill()">Save</button>
+  </div>
+</div>

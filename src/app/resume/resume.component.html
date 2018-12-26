@@ -1,0 +1,22 @@
+<div style="margin: 125px 125px 125px 125px">
+    <div class="row">
+      <div class="col-2">
+        <img src="{{ resume.image }}" class="img-fluid rounded" style="margin-bottom:40px; max-height: 190px;">
+      </div>
+      <div class="col-10">
+        <h1 class="text-title"><strong>{{ resume.first_name }} {{ resume.last_name }}</strong></h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-9">
+        <app-profile [resume]="resume"></app-profile>
+        <app-employment-history [resume]="resume"></app-employment-history>
+        <app-education [resume]="resume"></app-education>
+      </div>
+      <div class="col-3">
+        <app-details [resume]="resume"></app-details>
+        <app-skills [resume]="resume"></app-skills>
+        <app-languages [resume]="resume"></app-languages>
+      </div>
+    </div>
+  </div>
