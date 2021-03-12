@@ -24,7 +24,7 @@
     "core-js": "^2.5.4",
     "font-awesome": "^4.7.0",
     "html2canvas": "^1.0.0-alpha.12",
-    "jspdf": "^1.4.1",
+    "jspdf": "^2.3.1",
     "ngx-bootstrap": "^3.1.2",
     "ngx-editor": "^4.1.0",
     "rxjs": "~6.3.3",
